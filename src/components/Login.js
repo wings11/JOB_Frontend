@@ -37,7 +37,7 @@ function Login() {
   };
 
   return (
-    <Box maxW="400px" mx="auto" p={6} mt={10} boxShadow="lg" borderRadius="md" bg="white">
+    <Box maxW="400px" mx="auto" p={6} mt={10} boxShadow="lg" borderRadius="md" >
       <VStack spacing={4}>
         <Text fontSize="2xl" fontWeight="bold">Login</Text>
         <FormControl>
@@ -56,7 +56,7 @@ function Login() {
           Or
         </Text>
         <Button colorScheme="blue" onClick={handleGoogleLogin} w="full">
-          Continue with Google
+          Register with Google
         </Button>
         <Text fontSize="sm" color="gray.500" textAlign="center">
           Register and Log In using your Rsu Email Accounts.

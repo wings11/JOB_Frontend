@@ -40,7 +40,7 @@ function JobForm() {
   };
 
   return (
-    <Box maxW="600px" mx="auto" p={6} mt={10} boxShadow="lg" borderRadius="md" bg="white">
+    <Box maxW="600px" mx="auto" p={6} mt={10} boxShadow="lg" borderRadius="md" >
       <VStack spacing={4}>
         <Text fontSize="2xl" fontWeight="bold">{formData.id ? "Edit Job" : "Post Job"}</Text>
         {error && <Text color="red.500">{error}</Text>}
