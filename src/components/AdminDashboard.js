@@ -29,7 +29,7 @@ function AdminDashboard() {
   useEffect(() => {
     const fetchJobs = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/api/jobs", {
+        const response = await axios.get("https://rsu-job-fair-backend.onrender.com/api/jobs", {
           headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
         });
         setJobs(response.data);
@@ -42,7 +42,7 @@ function AdminDashboard() {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:5000/api/jobs/${id}`, {
+      await axios.delete(`https://rsu-job-fair-backend.onrender.com/api/jobs/${id}`, {
         headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
       });
       setJobs(jobs.filter((job) => job.id !== id));
@@ -53,7 +53,7 @@ function AdminDashboard() {
 
   const handleCreateAccount = async () => {
     try {
-      await axios.post("http://localhost:5000/api/auth/register", formData, {
+      await axios.post("https://rsu-job-fair-backend.onrender.com/api/auth/register", formData, {
         headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
       });
       setSuccess("Account created successfully");

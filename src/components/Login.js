@@ -12,7 +12,7 @@ function Login() {
 
   const handleSubmit = async () => {
     try {
-      const response = await axios.post("http://localhost:5000/api/auth/login", {
+      const response = await axios.post("https://rsu-job-fair-backend.onrender.com/api/auth/login", {
         email,
         password,
       });
@@ -33,7 +33,7 @@ function Login() {
   };
 
   const handleGoogleLogin = () => {
-    window.location.href = "http://localhost:5000/api/auth/google";
+    window.location.href = "https://rsu-job-fair-backend.onrender.com/api/auth/google";
   };
 
   return (

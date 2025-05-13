@@ -13,7 +13,7 @@ function ApplyForm() {
   useEffect(() => {
     const fetchJob = async () => {
       try {
-        const response = await axios.get(`http://localhost:5000/api/jobs/${id}`);
+        const response = await axios.get(`https://rsu-job-fair-backend.onrender.com/api/jobs/${id}`);
         setJob(response.data);
       } catch (err) {
         setError(err.response?.data?.error || "Failed to load job details");
@@ -27,7 +27,7 @@ function ApplyForm() {
   const handleApply = async () => {
     try {
       await axios.post(
-        `http://localhost:5000/api/applications/${id}/apply`,
+        `https://rsu-job-fair-backend.onrender.com/api/applications/${id}/apply`,
         {},
         { headers: { Authorization: `Bearer ${localStorage.getItem("token")}` } }
       );

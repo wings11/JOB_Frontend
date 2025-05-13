@@ -32,7 +32,7 @@ function Navbar() {
     }
     try {
       console.log("Navbar: Fetching user with token");
-      const response = await axios.get("http://localhost:5000/api/auth/me", {
+      const response = await axios.get("https://rsu-job-fair-backend.onrender.com/api/auth/me", {
         headers: { Authorization: `Bearer ${token}` },
       });
       console.log("Navbar: User fetched", response.data);

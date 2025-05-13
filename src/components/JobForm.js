@@ -26,8 +26,8 @@ function JobForm() {
         return;
       }
       const url = formData.id
-        ? `http://localhost:5000/api/jobs/${formData.id}`
-        : "http://localhost:5000/api/jobs";
+        ? `https://rsu-job-fair-backend.onrender.com/api/jobs/${formData.id}`
+        : "https://rsu-job-fair-backend.onrender.com/api/jobs";
       const method = formData.id ? "put" : "post";
       await axios[method](url, formData, {
         headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },

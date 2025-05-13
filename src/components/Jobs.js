@@ -11,7 +11,7 @@ function Jobs() {
   useEffect(() => {
     const fetchJobs = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/api/jobs");
+        const response = await axios.get("https://rsu-job-fair-backend.onrender.com/api/jobs");
         setJobs(response.data);
       } catch (error) {
         console.error("Error fetching jobs:", error);
@@ -19,7 +19,7 @@ function Jobs() {
     };
     const fetchUser = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/api/auth/me", {
+        const response = await axios.get("https://rsu-job-fair-backend.onrender.com/api/auth/me", {
           headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
         });
         setUser(response.data);

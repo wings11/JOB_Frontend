@@ -8,7 +8,7 @@ function StudentDashboard() {
   useEffect(() => {
     const fetchApplications = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/api/applications/student", {
+        const response = await axios.get("https://rsu-job-fair-backend.onrender.com/api/applications/student", {
           headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
         });
         setApplications(response.data);
